@@ -1,0 +1,220 @@
+/* Déclaration des variables de couleur */
+:root {
+  --brand-color: #ff3366; /* Couleur principale de la marque */
+  --brand-hover: #ff0033; /* Couleur pour l'effet de survol */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", Arial, sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+#close-menu{
+  display: none;
+}
+/* Style général du header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Logo */
+header .logo img {
+  margin-right: 10px;
+}
+
+header .logo h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--brand-color);
+}
+
+/* Navigation */
+/* Style des liens de navigation */
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+/* Correct hover effect */
+nav a:hover {
+  color: var(--brand-color);
+}
+
+/* Style de l'icône hamburger */
+#hamburger {
+  display: none; /* Cachez l'icône hamburger par défaut */
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Styles pour la version mobile (moins de 768px) */
+@media (max-width: 768px) {
+  /* Cache le menu par défaut */
+  nav {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    width: 50vw; /* Half of the viewport width (right side) */
+    height: 100vh; /* Full viewport height */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Affichage de l'icône hamburger */
+  #hamburger {
+    display: block;
+  }
+
+  /* Affiche le menu quand il a la classe active */
+  nav.active {
+    display: flex;
+  }
+
+  /* Styles des liens dans le menu */
+  nav a {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+  /* Close button styles (visible only on mobile) */
+  #close-menu {
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: transform 0.3s ease; /* Rotate animation */
+    display: block; /* Visible by default when the menu is open */
+  }
+
+  #close-menu.rotated {
+    transform: rotate(180deg); /* Rotate when clicked */
+  }
+
+  /* Styles des liens dans le menu */
+  nav a {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  /* Hide the close button initially */
+  #close-menu {
+    display: none;
+  }
+  #close-menu.rotated {
+    transform: rotate(180deg);
+  }
+  /* Show the close button when the menu is active */
+  nav.active #close-menu {
+    display: block;
+  }
+
+
+/* Améliorations de l'effet de survol */
+nav a:hover {
+  color: var(--brand-hover);
+} 
+/* Navigation Menu */
+nav {
+  display: flex;
+  gap: 25px; /* Increase the gap between menu items */
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 70px 0;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  transform: translateX(100%); /* Initially off-screen */
+}
+/* Menu visible (slide in from the right) */
+nav.active {
+  transform: translateX(0); /* Move to the right edge when active */
+}
+
+/* Menu links */
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  margin: 15px 0; /* Increase the vertical space between links */
+}
+
+/* Style des liens de navigation */
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Correct hover effect */
+nav a:hover {
+  color: var(--brand-color);
+}
+
+
+/* Close button (appears only when menu is active) */
+#close-menu {
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none; /* Initially hidden */
+}
+
+/* Display close button when the menu is active */
+nav.active #close-menu {
+  display: block;
+}
+}
+/* Hamburger display for mobile */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+}

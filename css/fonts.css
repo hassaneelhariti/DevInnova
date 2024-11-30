@@ -1,0 +1,14 @@
+/* Apply Poppins Bold font globally */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+/* Global font application for all text elements */
+body, h1, h2, h3, h4, h5, h6, p, a, input, textarea, button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; /* Make all the text bold */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}

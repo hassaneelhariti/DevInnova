@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABOUT US</title>
+  <link rel="stylesheet" href="../css/aboutus.css" />
+  <link rel="stylesheet" href="../css/header.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/fonts.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="../img/Logo.png" alt="Logo" width="50" height="50" />
+        </a>
+        <h2>DevInnova</h2>
+    </div>
+    <!-- Le bouton hamburger -->
+    <button id="hamburger">&#9776;</button>
+    
+    <!-- Le menu de navigation -->
+    <nav id="menu">
+      
+        <button id="close-menu">&#10005;</button> <!-- Close button -->
+        <a href="Services.html">Services</a>
+        <a href="about Us.html">About Us</a>
+        <a href="our projects.html">Our Projects</a>
+        <a href="contactus.html">Contact Us</a>
+    </nav>
+</header>
+
+
+
+  <div class="aboutushead">
+    <div class="overlay">
+      <h1>About Us</h1>
+      <p><a href="index.html">Home</a> / Our Services</p>
+    </div>
+  </div>
+
+  <div class="about-us-section">
+    <img src="../img/aboutusimg.jpg" alt="Video Editing Image" class="about-us-image" />
+    <div class="about-us-content">
+      <h1>We Always Make The Best</h1>
+      <p>
+        At DEVNNOVA, we are passionate about technology and innovation.
+        Founded in 2004, our company specializes in developing tailor-made
+        digital solutions to help our clients achieve their goals.
+      </p>
+      <a href="contactus.html">
+        <button class="btn">Contact Us</button>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="container1">
+    <div class="section">
+      <h2>Our Mission
+      </h2>
+      <p>
+        Nous nous engageons à fournir des solutions de développement de haute
+        qualité qui répondent aux besoins spécifiques de nos clients. Nous
+        croyons en l'importance d'une approche collaborative et personnalisée,
+        garantissant ainsi que chaque projet est unique et adapté aux
+        exigences de nos clients.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Our Team</h2>
+      <p>
+        At DEVLNNOVA, our strength lies in our team. Composed of passionate developers, designers, and technology
+        experts, each member brings their expertise to realize ambitious projects. We value diversity and encourage
+        innovation within our team to always provide the best solutions to our clients.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Our Values
+      </h2>
+      <p>
+        We believe in innovation, transparency, and excellence. Our team of experienced developers works tirelessly to
+        deliver solutions that not only meet expectations but exceed them.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="skills-section">
+    <div class="ourskillcontent">
+      <div class="skilltitle">
+        <h1>Our Skills</h1>
+        <p>We specialize in creating dynamic, user-friendly websites using the latest technologies. From front-end
+          design to back-end development and full-stack solutions, we deliver high-performance websites that provide
+          exceptional user experiences.</p>
+      </div>
+
+
+      <div class="skills-left">
+        <div class="skill">
+          <span>Front-End Development</span>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="85"></div>
+          </div>
+          <span class="percentage">85%</span>
+        </div>
+        <div class="skill">
+          <span>Back-End Development</span>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="90"></div>
+          </div>
+          <span class="percentage">90%</span>
+        </div>
+        <div class="skill">
+          <span>Web Design & UX/UI</span>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="77"></div>
+          </div>
+          <span class="percentage">77%</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="stats">
+      <div class="stat-box">
+        <h3 data-target="20">0</h3>
+        <p>Year Of Experience</p>
+      </div>
+      <div class="stat-box">
+        <h3 data-target="1000">0</h3>
+        <p>Project Done</p>
+      </div>
+      <div class="stat-box">
+        <h3 data-target="300">0</h3>
+        <p>Satisfied Client</p>
+      </div>
+      <div class="stat-box">
+        <h3 data-target="64">0</h3>
+        <p>Certified Award</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <section class="cta">
+    <h2>We Are Always Ready to Build Your Perfect Website</h2>
+    <button class="cta-btn">Get Started</button>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const progressBars = document.querySelectorAll(".progress");
+      const counters = document.querySelectorAll("[data-target]");
+      const section = document.querySelector(".skills-section");
+
+      // Fonction pour animer les barres de progression
+      const animateProgressBars = () => {
+        progressBars.forEach((bar) => {
+          const targetPercentage = parseInt(
+            bar.getAttribute("data-percentage"),
+            10
+          );
+          let currentPercentage = 0;
+
+          const interval = setInterval(() => {
+            if (currentPercentage < targetPercentage) {
+              currentPercentage++;
+              bar.style.width = currentPercentage + "%";
+            } else {
+              clearInterval(interval);
+            }
+          }, 10);
+        });
+      };
+
+      // Fonction pour animer les compteurs
+      const animateCounters = () => {
+        counters.forEach((counter) => {
+          const target = +counter.getAttribute("data-target");
+          const speed = 50;
+
+          const updateCounter = () => {
+            const current = +counter.innerText;
+            const increment = Math.ceil(target / speed);
+
+            if (current < target) {
+              counter.innerText = "+" + (current + increment);
+              setTimeout(updateCounter, 10);
+            } else {
+              counter.innerText = "+" + target;
+            }
+          };
+
+          updateCounter();
+        });
+      };
+
+      // Intersection Observer pour déclencher les animations
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateProgressBars();
+              animateCounters();
+              observer.disconnect(); // Arrête l'observation après l'animation
+            }
+          });
+        },
+        { threshold: 0.5 } // 50% de la section doit être visible pour déclencher
+      );
+
+      observer.observe(section);
+    });
+  </script>
+
+<footer class="footer">
+  <div class="menu">
+    <h2>DevInnova</h2>
+    <a href="about Us.html">About Us</a>
+    <a href="Services.html">Services</a>
+    <a href="our projects.html">Our Projet</a>
+    <a href="contactus.html">Contact Us</a>
+  </div>
+
+  <div class="office-box">
+    <img src="../img/location.png" alt="Office" width="5%" />
+    <div class="office-text">
+      <h4>DevInnova Technologies</h4>
+      <span> Quartier des Technologies, Parc Industriel, Agadir, Maroc</span>
+    </div>
+  </div>
+
+  <div class="logo">
+    <h2>DevInnova</h2>
+    <p>&copy; 2024. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+    // Fonction d'animation au scroll
+    window.addEventListener('scroll', function () {
+      const aboutSection = document.querySelector('.about-us-section');
+      const aboutImage = document.querySelector('.about-us-image');
+      const aboutContent = document.querySelector('.about-us-content');
+
+      const sectionTop = aboutSection.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight) {
+        aboutImage.classList.add('animate-left');
+        aboutContent.classList.add('animate-right');
+      }
+    });
+
+  </script>
+  <script src="../js/header.js"></script>
+
+</body>
+
+</html>

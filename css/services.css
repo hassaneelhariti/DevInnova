@@ -1,0 +1,496 @@
+/* Déclaration des variables de couleur */
+:root {
+  --brand-color: #ff3366; /* Couleur principale de la marque */
+  --brand-hover: #ff0033; /* Couleur pour l'effet de survol */
+}
+
+* {
+
+  box-sizing: border-box;
+  font-family: "raleway";
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+
+/* Responsive : ajustement pour écrans étroits */
+
+
+/* Style pour le header OurServiceshead */
+.OurServiceshead {
+  position: relative; 
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), #111), url('../img/sevicesbackgroud.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Hauteur du header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.OurServiceshead h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.OurServiceshead p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.OurServiceshead p a {
+  text-decoration: none;
+  color: var(--brand-hover); /* Couleur pour les liens */
+}
+
+.OurServiceshead p a:hover {
+  color: var(--brand-color); /* Couleur au survol */
+}
+
+/* Wrapper */
+.wrapper {
+  font-family: "raleway";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper h1 {
+  font-size: 3em;
+  margin: 25px 0;
+  text-align: center;
+  font-weight: 600;
+  color: var(--brand-color);
+}
+
+/* Content box et cartes */
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin-top: 30px;
+}
+.wrapper h1 {
+  font-size: 3em;
+  margin: 25px 0;
+  text-align: center;
+  font-weight: 600;
+  color: rgb(255, 0, 82);
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin-top: 30px;
+}
+.card {
+  min-width: 220px;
+  width: 320px;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #22222274;
+  margin: 10px 4px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.card i {
+  margin: 20px;
+  color: #ff3366;
+}
+.card h2 {
+  margin-bottom: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+.card p {
+  color: #6c757d;
+  text-align: center;
+}
+.card:hover i,
+.card:hover p {
+  color: #fff;
+}
+.card:hover h2 {
+  font-weight: 600;
+  color: #f2f2f2;
+}
+.card:nth-child(1):hover {
+  background: linear-gradient(
+      45deg,
+      rgba(255, 28, 8, 0.8) 0%,
+      rgba(255, 0, 82, 0.8) 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUUEtEbiGyEdeYLJ_14pWJ4OV4dHoCKG1Fug&s");
+  background-size: cover;
+}
+.card:nth-child(2):hover {
+  background: linear-gradient(
+      45deg,
+      rgba(255, 28, 8, 0.8) 0%,
+      rgba(255, 0, 82, 0.8) 100%
+    ),
+    url("https://blog.openclassrooms.com/en/wp-content/uploads/sites/4/2018/03/web-develoment.jpg");
+  background-size: cover;
+}
+.card:nth-child(3):hover {
+  background: linear-gradient(
+      45deg,
+      rgba(255, 28, 8, 0.8) 0%,
+      rgba(255, 0, 82, 0.8) 100%
+    ),
+    url("https://www.moncallcenter.ma/images/centre/marketing-call-center/6.jpg");
+  background-size: cover;
+}
+.card:nth-child(4):hover {
+  background: linear-gradient(
+      45deg,
+      rgba(255, 28, 8, 0.8) 0%,
+      rgba(255, 0, 82, 0.8) 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeD1HJERSFuR3qYWUFy9WNeo_Qy6Hrp5UCgw&s");
+  background-size: cover;
+}
+.card:nth-child(5):hover {
+  background: linear-gradient(
+      45deg,
+      rgba(255, 28, 8, 0.8) 0%,
+      rgba(255, 0, 82, 0.8) 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR72o3uWVLUh9L27rbA3lY6F8w021EjiExmnQ&s");
+  background-size: cover;
+}
+.card:nth-child(6):hover {
+  background: linear-gradient(
+      45deg,
+      rgba(255, 28, 8, 0.8) 0%,
+      rgba(255, 0, 82, 0.8) 100%
+    ),
+    url("https://www.rajeevshinh.com/wp-content/uploads/2021/04/Creative-Consultancy-1-1600x1066.jpg");
+  background-size: cover;
+}
+
+/*animation des cartes*/
+/* Animation des cartes */
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Application des animations */
+.card {
+  opacity: 0;
+  animation: slideInUp 0.6s ease-in-out forwards;
+}
+
+/* Délais pour les trois premières cartes */
+.card:nth-child(1) {
+  animation-delay: 0s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Délais pour les trois cartes suivantes */
+.card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.card:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.card:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.cta {
+  position: relative; 
+  background-image: linear-gradient(180deg,#000000cd, #000000cd), url('../img/contactusimagefoot.jpg'); /* Effet de dégradé sur l'image de fond */
+  background-position: center;
+  background-size: cover;
+  width: 1000px;
+  height: 400px; /* Hauteur du header */
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  text-align: center;
+  margin: 30px auto;
+  border: #111;
+  border-radius: 10px;
+}
+.cta h2{
+  margin: 20px;
+}
+.cta-btn {
+  background: #ff3366; /* Couleur rose */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Style du footer */
+.footer {
+  background-color: #212121; /* Fond sombre */
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer h2 {
+  color: #ff3366; /* Rose pour le nom de la marque */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Menu du footer */
+.footer .menu {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 10px 10px 100px;
+}
+
+.footer .menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  margin: 8px 0;
+  transition: color 0.3s;
+}
+
+.footer .menu a:hover {
+  color: #ff3366; /* Rose au survol */
+}
+
+/* Bloc de l'adresse */
+.footer .office-box {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 200px;
+  margin-top: 20px;
+}
+
+.footer .office-box img {
+  width: 30px;
+  margin-right: 15px;
+}
+
+.footer .office-text h4 {
+  color: #ff3366; /* Rose pour le titre */
+  margin: 0;
+}
+
+.footer .office-text span {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+/* Logo du footer */
+.footer .logo {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  margin-top: 20px;
+}
+
+.footer .logo p {
+  color: #ddd;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.footer .logo h2 {
+  color: #ff3366; /* Rose pour le logo */
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Pour la mise en page responsive (pour les écrans plus petits) */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .menu, .footer .office-box, .footer .logo {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+
+  .footer .logo h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .wrapper {
+    padding: 25px;
+  }
+
+  .wrapper h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+
+  .content-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card {
+    min-width: 300px;
+    margin: 10px auto;
+  }
+}
+/* Responsive styles for phones */
+@media (max-width: 576px) {
+  body {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  .OurServiceshead {
+    height: 200px; /* Reduce height for smaller screens */
+    padding: 1rem; /* Add some padding for better spacing */
+  }
+
+  .OurServiceshead h1 {
+    font-size: 1.8rem; /* Scale down heading size */
+  }
+
+  .OurServiceshead p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+
+  .wrapper {
+    padding: 15px; /* Reduce padding for smaller devices */
+  }
+
+  .wrapper h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .content-box {
+    flex-direction: column; /* Stack cards vertically */
+    width: 100%; /* Use full width */
+    align-items: center; /* Center align the cards */
+  }
+
+  .card {
+    width: 90%; /* Make cards take up most of the screen */
+    margin: 10px auto; /* Add vertical margin */
+    padding: 20px; /* Reduce padding inside cards */
+  }
+
+  .card h2 {
+    font-size: 1rem; /* Reduce heading size in cards */
+  }
+
+  .card p {
+    font-size: 0.85rem; /* Adjust text size */
+  }
+
+  .cta {
+    width: 90%; /* Reduce width to fit smaller screens */
+    height: auto; /* Adjust height to be dynamic */
+    margin: 20px auto; /* Center align the section */
+    padding: 1rem; /* Add padding for better spacing */
+    border-radius: 10px;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+}
+/* Responsive footer styles for phones */
+@media (max-width: 576px) {
+  .footer {
+    flex-direction: column; /* Stack footer elements vertically */
+    padding: 20px; /* Add spacing */
+    text-align: center; /* Center-align text and items */
+  }
+
+  .footer .menu,
+  .footer .office-box,
+  .footer .logo {
+    width: 100%; /* Full width for all sections */
+    margin: 20px 0; /* Add vertical spacing between sections */
+  }
+
+  .footer h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+    margin-bottom: 15px; /* Add spacing below headings */
+  }
+
+  .footer .menu a {
+    font-size: 0.85rem; /* Adjust link font size */
+    margin: 5px 0; /* Add spacing between links */
+  }
+
+  .footer .office-box {
+    justify-content: center; /* Center align content */
+  }
+
+  .footer .office-box img {
+    width: 24px; /* Reduce icon size */
+    margin-right: 10px; /* Space between icon and text */
+  }
+
+  .footer .office-text h4 {
+    font-size: 1rem; /* Adjust title size */
+  }
+
+  .footer .office-text span {
+    font-size: 0.85rem; /* Adjust text size */
+  }
+
+  .footer .logo h2 {
+    font-size: 1.5rem; /* Scale down logo size */
+    margin: 10px 0; /* Add spacing around logo */
+  }
+
+  .footer .logo p {
+    font-size: 0.8rem; /* Reduce descriptive text size */
+    margin-top: 5px; /* Add spacing above the paragraph */
+  }
+}
